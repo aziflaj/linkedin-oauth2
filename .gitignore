@@ -1,6 +1,8 @@
 # Only gem-specific ignores are included in this file.
 # For common .gitignore items, you should set your local ~/.gitignore
 
+.idea
+
 # We want to ignore Gemfile.lock for gems. See http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/
 Gemfile.lock
 .Gemfile

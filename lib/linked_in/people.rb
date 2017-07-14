@@ -59,7 +59,7 @@ module LinkedIn
     #
     # @see http://developer.linkedin.com/documents/connections-api
     #
-    # @param [String, Fixnum, Time] modified_since timestamp in unix time
+    # @param [String, Integer, Time] modified_since timestamp in unix time
     #   miliseconds indicating since when you want to retrieve new
     #   connections
     # @param [Hash] opts profile options
@@ -128,7 +128,7 @@ module LinkedIn
 
     # Returns a unix time in miliseconds
     def parse_modified_since(since)
-      if since.is_a? ::Fixnum
+      if since.is_a? ::Integer
         if ::Time.at(since).year < 2050
           # Got passed in as seconds.
           since = since * 1000
